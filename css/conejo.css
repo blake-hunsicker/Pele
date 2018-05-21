@@ -1,59 +1,31 @@
 /* Layout */
-
-.hero-container {
+.container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 20px;
-  height:100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image:
-  linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.75)), url(https://i.imgur.com/h7htSSL.jpg);
-}
-.hero-title {
-  grid-column: span 12;
-  grid-row: 2;
-  color: #FFF;
-  text-align: center;
-  margin-top:40px;
-}
-.latest {
-  grid-column: 4 / 10;
-  grid-row: 3;
-  color: #FFF;
-}
-.hed-title {
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-.scroll-instruction {
-  grid-column: span 12;
-  grid-row: 4;
-  color: #FFF;
-  text-align: center;
 }
 .header {
   grid-column: 1 / 13;
   grid-row: 1;
+  position: sticky;
+  top: 0;
   background: #FFFFFF;
 }
-.well-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-}
 .story-well {
-  grid-column: 2 / 8;
-  grid-row: 6;
+  grid-column: 6 / 12;
+  grid-row: 2;
   align-self: flex-start;
   /* margin-top: 20px; */
 }
 .explainer-panel {
-  grid-column: 9 / 13;
-  grid-row: 6 / 8;
+  grid-column: 1 / 5;
+  grid-row: 2 / 6;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: scroll;
   background: #FFFFFF;
-  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
 }
 .footer {
   grid-column: span 12;
@@ -71,7 +43,6 @@ body {
 }
 
 .nav {
-  position: fixed;
   text-align: center;
   color: #FFF;
   padding: 10px;
@@ -89,7 +60,7 @@ img {
 .well-title {
   font-family: "Roboto";
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .panel-header {
@@ -308,9 +279,20 @@ img {
   border: 1px solid #C0C0C0;
 }
 .related-post-content {
+  display: none;
+}
+.open {
+  display: block;
 }
 .active {
   /* border: 1px solid #C0C0C0; */
+}
+.dark-post {
+  border: 1px solid #C0C0C0;
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-top: 60px;
+
 }
 .attachment-content :hover {
   cursor: pointer;
@@ -321,10 +303,4 @@ img {
 .attachment-title {
   font-family: 'Roboto', sans-serif;
   font-weight:bold;
-}
-.related-post-content {
-  display: none;
-}
-.open {
-  display: block;
 }
